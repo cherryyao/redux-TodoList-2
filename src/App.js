@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './css/todo.css'
-import AddItem from './Component/AddItem'
+import AddItem from './container/AddItemContainer'
 import ShowItem from './container/ShowItemContainer'
 import FilterItem from './Component/FilterItem';
 
@@ -56,13 +56,13 @@ deepCopy(array) {
   return JSON.parse(JSON.stringify(array));
 }
 
-addItem=(content)=>{
-  console.log(this.state.todos)
-  let todos = this.deepCopy(this.state.todos);
-  todos.push({id:this.generateUUID(),content,iscomplete:false});
-  this.setState({todos})
+// addItem=(content)=>{
+//   console.log(this.state.todos)
+//   let todos = this.deepCopy(this.state.todos);
+//   todos.push({id:this.generateUUID(),content,iscomplete:false});
+//   this.setState({todos})
 
-}
+// }
 
 toggleActive=(id)=>{
   let todos = this.deepCopy(this.state.todos)
@@ -95,7 +95,9 @@ changeContent = (newId,newContent) => {
             </p>
           </div>
 
-          <AddItem addHandler={this.addItem}/>
+          <AddItem 
+          //addHandler={this.addItem}
+          />
           <ShowItem 
            toggleActiveHandler={this.toggleActive}
            updateItemContent={this.changeContent}

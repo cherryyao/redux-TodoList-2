@@ -30,7 +30,7 @@ export default class ShowItem extends React.Component {
 
   render() {
     let {todos} = this.props;
-    console.log(this.state.status)
+    console.log(this.state)
     console.log(todos)  
     return (
       <div>

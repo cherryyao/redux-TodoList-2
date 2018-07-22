@@ -1,0 +1,1 @@
+export const addTodo = (todos) =>({ type:'ADD_TODO',todos })

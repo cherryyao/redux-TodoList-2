@@ -9,8 +9,9 @@ export default class AddItem extends React.Component {
     this.textValue = React.createRef();
   }
   addItem=()=>{
-    console.log(this.textValue)
+   
     const inputValue = this.textValue.current.value
+    console.log(inputValue)
     this.props.addHandler(inputValue)
     this.textValue.current.value=" "
   }

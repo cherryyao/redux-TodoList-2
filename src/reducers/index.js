@@ -15,8 +15,9 @@ export default (state={
     console.log(state)
     switch(action.type){
         case 'ADD_TODO':{
-            return null;
-
+            let newState = [...state]
+            newState.todos = action.todos
+            return newState
         }
         default:
         return state
